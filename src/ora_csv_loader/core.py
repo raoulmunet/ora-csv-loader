@@ -58,7 +58,7 @@ def render_ctl(table:str,csv_name:str,cols:list[ColumnGuess])->str:
         f"INFILE '{csv_name}'",
         f"INTO TABLE {table.upper()}",
         "APPEND",
-        "FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'",
+        "FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '\"'",
         "TRAILING NULLCOLS",
         "(",
         ",\n".join(fields),
